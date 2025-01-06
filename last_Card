@@ -1,0 +1,17 @@
+import queue
+import random
+
+N = random.randint(1, 500000)
+print("입력 : {}장의 카드".format(N))
+card = queue.Queue()
+move_card = 0
+
+for i in range(1, N + 1) :
+  card.put(i)
+
+while (card.qsize() > 1) :
+  card.get()
+  move_card = card.get()
+  card.put(move_card)
+
+print("마지막에 남은 카드 : {}".format(card.get()))
