@@ -1,0 +1,23 @@
+M = int(input())
+result = []
+
+for j in range(M) :
+  N = str(input())
+  VPS = []
+  for i in N :
+    if i == '(' :
+      VPS.append(i)
+    elif i == ')' :
+      if len(VPS) != 0 :
+        VPS.pop()
+      else :
+        VPS.append(1)
+        break
+  
+  if len(VPS) == 0 :
+    result.append("YES")
+  else :
+    result.append("NO")
+
+for k in result :
+  print(k)
