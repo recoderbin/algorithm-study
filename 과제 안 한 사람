@@ -1,0 +1,11 @@
+student = []
+for i in range(1, 31) :
+  student.append(i)
+8
+for i in range(28): 
+    N = int(input())
+    student.remove(N) 
+
+print()  
+print(student[0])  
+print(student[1]) 
