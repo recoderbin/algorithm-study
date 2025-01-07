@@ -1,0 +1,20 @@
+list = []
+N = int(input())
+for i in range(N):
+  M = int(input())
+  list.append(M)
+
+count = 1
+tall = max(list)
+tall_location = 0
+
+for x in list[-1:] :
+  if x == tall :
+    tall_location = x
+    break 
+
+for j in list[tall_location:] :
+  if j > list[-1] :
+    count = count + 1
+
+print(count)
