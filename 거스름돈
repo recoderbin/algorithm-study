@@ -1,0 +1,32 @@
+#거스름돈
+P = int(input())
+Receive = 1000 - P
+
+count = 0
+while Receive > 0 :
+  while Receive >= 500 :
+    Receive = Receive - 500
+    count = count + 1
+ 
+  while Receive >= 100 :
+    Receive = Receive - 100
+    count = count + 1
+
+  while Receive >= 50 :
+    Receive = Receive - 50
+    count = count + 1
+
+  while Receive >= 10 :
+    Receive = Receive - 10
+    count = count + 1
+
+  while Receive >= 5 :
+    Receive = Receive - 5
+    count = count + 1
+
+  while Receive >= 1 :
+    Receive = Receive - 1
+    count = count + 1
+
+    
+print(count)
