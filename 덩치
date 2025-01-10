@@ -1,0 +1,20 @@
+#덩치
+N = int(input())
+weights = []
+heights = []
+ranks = []
+
+for i in range(N):
+    weight, height = map(int, input().split())
+    weights.append(weight) #55, 58, 88, 60, 46
+    heights.append(height) #185, 183, 186, 175, 155
+    ranks.append(1) #1,1,1,1,1
+
+for j in range(N): #1번 사람부터 시작해 
+    for k in range(N): # 다른 사람들과 체급을 비교
+        if j != k: # 이때 자기 자신과는 무시
+            if weights[j] < weights[k] and heights[j] < heights[k]: #비교시 다른 사람이 자신보다 몸무게와 키가 더 크면  
+                ranks[j] += 1 #등급을 1만큼 올림
+                              #이 과정은 모든 사람의 비교가 끝날때까지 반복
+
+print(*ranks)#출력
